@@ -1,2 +1,3 @@
-# ts-gymnastics
-Typescript类型练习
+# typescript类型练习
+
+1. [变换](./packages/vary/package.json)
