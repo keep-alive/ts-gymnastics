@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:vary": "pnpm run -C packages/vary dev"
+    "dev:vary": "pnpm run -C packages/vary dev",
+    "dev:infer": "pnpm run -C packages/infer dev"
   },
   "keywords": [],
   "author": "",
