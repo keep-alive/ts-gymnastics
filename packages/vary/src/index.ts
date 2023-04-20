@@ -27,5 +27,34 @@ type UppercaseResult = Uppercase<'tianwen'>
 type DropSubStr<Str extends string, SubStr extends string> = Str extends `${infer Prefix}${SubStr}${infer Suffix}` ? DropSubStr<`${Prefix}${Suffix}`,SubStr> : Str
 type DropSubStrReuslt = DropSubStr<'duang_duang_duang','_'>
 
+/**
+* @description 函数类型重新构造 AddArgument 函数类型新增参数
+*/
+type AddArgument<Fun extends Function,Arg> = Fun extends (...args: infer Args) => infer ReturnType ? 
+| ((...args: [...Args,Arg]) => ReturnType) : never
+type AddArgumentResult = AddArgument<(name: string) => Boolean,12>
+
+/**
+* @description 索引类型构造 //tips: as用于重映射
+*/
+type obj = {
+  readonly name: string;
+  age?: number;
+  1: boolean;
+}
+type UppercaseKey<Obj extends object> = {
+  -readonly[Key in keyof Obj as Uppercase<Key & string>]-?: Obj[Key]
+}
+
+type UppercaseKeyResult = UppercaseKey<obj>
+
+/**
+* @description FilterByValueType
+*/
+type FilterByValueType<Obj extends Record<string, any>, ValueType> = {
+  [Key in keyof Obj as Obj[Key] extends ValueType ? Key : never]: Obj[Key]
+}
+
+type FilterByValueTypeResult = FilterByValueType<obj,string>
 
 console.log('vary tsnd working')
