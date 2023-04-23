@@ -1,7 +1,7 @@
 {
-  "name": "vary",
+  "name": "recursion",
   "version": "1.0.0",
-  "description": "重新构造",
+  "description": "递归复用",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
