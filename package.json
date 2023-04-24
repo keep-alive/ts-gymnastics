@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:infer": "pnpm run -C packages/infer dev",
     "dev:vary": "pnpm run -C packages/vary dev",
     "dev:recursion": "pnpm run -C packages/recursion dev",
-    "dev:infer": "pnpm run -C packages/infer dev"
+    "dev:special": "pnpm run -C packages/special dev",
+    "dev:calculate": "pnpm run -C packages/calculate dev"
   },
   "keywords": [],
   "author": "",
