@@ -5,3 +5,4 @@
 3. [递归](./packages/recursion/package.json)
 4. [计数](./packages/calculate/package.json)
 5. [联合类型](./packages/union/package.json)
+6. [内置类型](./packages/builtIn/package.json)
