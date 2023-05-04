@@ -8,6 +8,8 @@
     "dev:vary": "pnpm run -C packages/vary dev",
     "dev:recursion": "pnpm run -C packages/recursion dev",
     "dev:special": "pnpm run -C packages/special dev",
+    "dev:builtIn": "pnpm run -C packages/builtIn dev",
+    "dev:union": "pnpm run -C packages/union dev",
     "dev:calculate": "pnpm run -C packages/calculate dev"
   },
   "keywords": [],

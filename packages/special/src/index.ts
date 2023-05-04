@@ -15,9 +15,13 @@ type IsNever<T> = [T] extends [never] ? true : false
 type IsNeverResult = IsNever<never>
 
 /**
-* @description 元组类型 length 是数字字面量,数组 length 是 number
+* @description 两个条件类型判断相关性，就可以利用 extends 右边部分相等的性质来判断两个类型是否 equal
 */
 type NotEqual<A,B> = (<T>() => T extends A ? 1 : 2) extends (<T>() => T extends B ? 1 : 2) ? false : true
+
+/**
+* @description 元组类型 length 是数字字面量,数组 length 是 number
+*/
 type IsTuple<T> = T extends [...params: infer Eles] ? NotEqual<Eles['length'],number> : false
 type IsTupleResult = IsTuple<unknown[]>
 
