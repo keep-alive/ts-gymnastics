@@ -9,5 +9,15 @@ type Chunk<Arr extends unknown[], Lenth extends number, Item extends unknown[] =
 
 type ChunkResult = Chunk<[1,2,3,4,5],2>
 
+/**
+* @description UnionToTuple(联合类型转元组，比如 'a'|'b'|'c' => ['a','b','c'])
+*/
+type UnionToIntersection<U> = (U extends U ? (x: U) => unknown : never) extends (x: infer R) => unknown ?
+| R : never
+type UnionToTuple<T> = UnionToIntersection<T extends any ? () => T : never> extends () => infer R ?
+| [...UnionToTuple<Exclude<T, R>>, R] : []
+type UnionToTupleResult = UnionToTuple<'a' | 'b' | 'c'>
+
+
 
 console.log('example tsnd working')
