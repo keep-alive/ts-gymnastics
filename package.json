@@ -10,7 +10,8 @@
     "dev:special": "pnpm run -C packages/special dev",
     "dev:builtIn": "pnpm run -C packages/builtIn dev",
     "dev:union": "pnpm run -C packages/union dev",
-    "dev:calculate": "pnpm run -C packages/calculate dev"
+    "dev:calculate": "pnpm run -C packages/calculate dev",
+    "dev:example": "pnpm run -C packages/example dev"
   },
   "keywords": [],
   "author": "",
